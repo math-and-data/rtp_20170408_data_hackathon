@@ -36,5 +36,5 @@ Table 14 lists the agencies that indicated that no instances of hate crime occur
 ![Table14 Layout](https://github.com/math-and-data/rtp_20170408_data_hackathon/blob/master/screenshot_table_14.PNG)  
 
 ## Pitfalls
-[Don't draw early conclusions](https://ucr.fbi.gov/ucr-statistics-their-proper-use): places with fewer or no data points may not be doing better, they may just not report data or discurrage reporting.  
+[Don't draw early conclusions](https://ucr.fbi.gov/ucr-statistics-their-proper-use): places with fewer or no data points may not be doing better, they may just not report data or discourage reporting.  
 Understand the domain and data you are working with.  
