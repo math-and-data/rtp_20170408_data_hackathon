@@ -22,6 +22,19 @@ Welcome to the R-Ladies RTP Data Hackathon! We are using U.S. Hate Crime data fo
 ## Dataset
 We are interested in the yearly tables 12, 13, and 14 from the [U.S. Hate Crime data set] (https://ucr.fbi.gov/hate-crime).  
 
+### Table 12  
+Table 12 presents the following data for each state: the total number of participating agencies, the population represented, the number of agencies that submitted data about hate crime incidents, and the number of incidents reported.  
+![Table12 Layout](https://github.com/math-and-data/rtp_20170408_data_hackathon/blob/master/screenshot_table_12.PNG)  
+
+### Table 13  
+Table 13 provides the data from those agencies that reported that one or more hate crime incidents occurred in their respective jurisdictions during one or more quarters in the year.   
+Tables 13 and 14 present the data by state, and each state is subdivided by agency type. Agency types include ``cities``, ``universities and colleges``, ``metropolitan counties``, ``nonmetropolitan counties``, ``state police agencies``, ``tribal agencies``, and ``other agencies``. The data published for universities and colleges represent crime reported only by those individual university/college law enforcement agencies that contributed to the UCR Program; the tables do not specify information about educational institutions that reported hate crime data via their local law enforcement agencies.  
+![Table13 Layout](https://github.com/math-and-data/rtp_20170408_data_hackathon/blob/master/screenshot_table_13.PNG)  
+
+### Table 14  
+Table 14 lists the agencies that indicated that no instances of hate crime occurred in their respective jurisdictions during the quarter(s) in 2015 for which they submitted reports.  
+![Table14 Layout](https://github.com/math-and-data/rtp_20170408_data_hackathon/blob/master/screenshot_table_14.PNG)  
+
 ## Pitfalls
 [Don't draw early conclusions](https://ucr.fbi.gov/ucr-statistics-their-proper-use): places with fewer or no data points may not be doing better, they may just not report data or discurrage reporting.  
 Understand the domain and data you are working with.  
