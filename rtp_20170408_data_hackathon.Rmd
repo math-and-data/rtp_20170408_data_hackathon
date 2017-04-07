@@ -1,0 +1,27 @@
+---
+title: "R Ladies RTP - Data Hackathon"
+author: "Gjeltema"
+date: "April 8, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sign up
+[Register on Meetup](https://www.meetup.com/R-Ladies-RTP/events/237470550/)
+
+## Introduction
+Welcome to the R-Ladies RTP Data Hackathon! We are using U.S. Hate Crime data for the last few years to build on our skills from previous R-Ladies workshops.  
+1. [Getting Data into R](https://github.com/rladies/rtp-data-import-11-13-16): Ingesting data from outside data sources   
+2. [Data Manipulation](https://github.com/rladies/rtp-data-manipulation-09-22-16): Wrangling with data, cleanup, ETL  
+3. [Visualization with ggplot](https://github.com/rladies/rtp-data-viz-ggplot2-10-15-16): Visualizing data in charts, maps  
+4. [Interactive visualization with Shiny](https://github.com/rladies/rtp_20170309_shiny): Interactive charting to explore the data  
+
+## Dataset
+We are interested in the yearly tables 12, 13, and 14 from the [U.S. Hate Crime data set] (https://ucr.fbi.gov/hate-crime).  
+
+## Pitfalls
+[Don't draw early conclusions](https://ucr.fbi.gov/ucr-statistics-their-proper-use): places with fewer or no data points may not be doing better, they may just not report data or discurrage reporting.  
+Understand the domain and data you are working with.  
