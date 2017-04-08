@@ -10,6 +10,9 @@ if (!require("tidyverse")) {
 if (!require("readxl")) {
   install.packages("readxl"); library("readxl")
 }
+if (!require("purrr")) {
+  install.packages("purrr"); library("purrr")
+}
 #---- read in a file ----
 # great commands for reading files: .csv files or other character-delimited files
 #  base::read.csv() [no need to use this anymore, use readr package instead]
@@ -29,7 +32,7 @@ names(t13_2015.header2)
 tworow_headers <- data.frame(names(t13_2015.header1), names(t13_2015.header2)) %>% 
   apply(., 1, function(x) {paste(x,collapse=" ")})
 # 'purrr' version:
-tworow_headers <- map2_chr(names(t13_2015.header1),names(t13_2015.header2),paste, collapse="")
+tworow_headers <- purrr::map2_chr(names(t13_2015.header1),names(t13_2015.header2),paste, collapse="")
 rm(t13_2015.header1, t13_2015.header2) # clean up
 
 # now read in the proper data and assign the newly created header
