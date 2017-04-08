@@ -70,6 +70,13 @@ Blank vs. 0:  Blanks in any of the four columns under "Number of incidents per q
 
 ### Reading a sample of 'cleaned up data'
 ```{r readTable13in2015, eval=FALSE, echo=TRUE}
+if (!require("readxl")) {
+  install.packages("readxl"); library("readxl")
+}
+if (!require("tidyverse")) {
+  install.packages("tidyverse"); library("tidyverse")
+}
+
 t13_2015.clean <- "data/Table_13_Hate_Crime_Incidents_per_Bias_Motivation_and_Quarter_by_State_and_Agency_2015-manual_correction.xls" %>%
   read_excel(col_names=TRUE, col_types=NULL, na="", skip=0);
 
