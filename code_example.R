@@ -16,6 +16,12 @@ if (!require("readxl")) {
 if (!require("purrr")) {
   install.packages("purrr"); library("purrr")
 }
+if (!require("DT")) {
+  install.packages("DT"); library("DT")
+}
+if (!require("ggplot2")) {
+  install.packages("ggplot2"); library("ggplot2")
+}
 #---- read in a file ----
 # great commands for reading files: .csv files or other character-delimited files
 #  base::read.csv() [no need to use this anymore]
@@ -76,10 +82,32 @@ t13_2015 <- t13_2015 %>%
 summary(t13_2015)
 
 #---- we have clean data now, let's visualize it ----
+# reportings by state ----
 
-# population by state [Table 12]
-# reportings by state
 total_by_state <- t13_2015 %>% filter(`Agency Type`=="Total")
 # remove columns that are all NAs
 total_by_state <- total_by_state[, colSums(is.na(total_by_state)) < nrow(total_by_state)]
-# %of total in the different bias categories
+
+# new column with totals number of incidents that were reported
+total_by_state$total_reported <- rowSums(total_by_state %>% select(-State, -`Agency Type`))
+
+total_by_state %>%
+  ggplot(aes(x=total_reported, y=State)) + geom_point();
+
+total_by_state %>%
+  ggplot(aes(x=State, y=total_reported)) + 
+  geom_col() + coord_flip();
+
+total_by_state %>% 
+  DT::datatable(rownames=FALSE) %>%
+  formatStyle("total_reported",
+              background = styleColorBar(total_by_state$total_reported, 'steelblue'),
+              backgroundSize = '100% 90%',
+              backgroundRepeat = 'no-repeat',
+              backgroundPosition ='center'
+  )
+
+# %of total in the different bias categories ----
+#  homework
+# population by state [Table 12] ----
+#  homework
