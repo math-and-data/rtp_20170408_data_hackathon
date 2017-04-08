@@ -68,6 +68,30 @@ Hawaii does not participate in the Hate Crime Statistics Program.
 The URLs are not consistent and change year over year.  
 Blank vs. 0:  Blanks in any of the four columns under "Number of incidents per quarter" in table 13 indicate that an agency did not submit a report for that particular quarter.  
 
+### Reading a sample of 'cleaned up data'
+```{r readTable13in2015, eval=FALSE, echo=TRUE}
+t13_2015.clean <- "data/Table_13_Hate_Crime_Incidents_per_Bias_Motivation_and_Quarter_by_State_and_Agency_2015-manual_correction.xls" %>%
+  read_excel(col_names=TRUE, col_types=NULL, na="", skip=0);
+
+names(t13_2015.clean)
+head(t13_2015.clean)
+tail(t13_2015.clean)
+summary(t13_2015.clean)
+glimpse(t13_2015.clean)
+
+t13_2015.clean <- t13_2015.clean %>% 
+  mutate(
+    `Agency Type`=as.factor(`Agency Type`),
+    State=as.factor(State)
+  );
+levels(t13_2015.clean$`Agency Type`)
+
+t13_2015.clean.per_state <- t13_2015.clean %>%
+  filter(`Agency Type`=="Total")
+
+t13_2015.clean.per_agency_name <- t13_2015.clean %>%
+  filter(!is.na(`Agency name`))
+```
 
 ## Brainstorming
 * How can we automate the data retrieval from the website and the formatting?
